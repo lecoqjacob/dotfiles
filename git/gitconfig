@@ -1,0 +1,96 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[core]
+    editor = nvim
+    pager = delta
+    excludesfile = /Users/elkxj/.gitignore-global
+    attributesfile = ~/.gitattributes
+
+[alias]
+    nuke = !git-nuke
+    cr = "!f() { git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done }; f"
+    pnv = push --no-verify
+    pnvf = push --no-verify --force
+
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    showbranch = auto
+
+[color "branch"]
+	local = yellow
+	remote = green
+    current = yellow reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+
+[color "diff"]
+	old = red bold
+	new = green bold
+	meta = yellow bold
+	frag = magenta bold
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+
+[diff]
+    colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = difftastic
+
+[user]
+    email = lecoqjacob@gmail.com
+    name = Jacob LeCoq
+	signingkey = 9093D4CAA98119D7
+
+[hub]
+    protocol = ssh
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[commit]
+	gpgsign = true
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[push]
+    autoSetupRemote = true
+
+[format]
+    pretty = %C(yellow)%h%Creset %C(magenta)%cd%Creset %an <%ae> %C(cyan)%s%Creset%C(yellow)%d%Creset%n
+
+[init]
+	defaultBranch = main
+
+# https://github.com/GitAlias/gitalias
+[include]
+	path = ~/.gitalias.txt
+
+# Alternate identities
+[include]
+	path = ~/.gitidentities/identities

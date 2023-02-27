@@ -1,0 +1,40 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      glob: true
+
+- clean: ['~', '~/.zsh', '~/bin', '~/.gitidentities']
+
+- shell:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+
+    - command: pip3 install --upgrade -r bin/requirements.txt
+      stdout: true
+      stderr: true
+      description: Install dependencies for scripts in ~/bin
+
+    - command: script/code-import-ext
+      stdout: true
+      stderr: true
+      description: Install VS Code extensions
+
+    # Neovim / zsh
+    - sudo apt update && sudo apt install neovim zsh
+
+- link:
+    ~/.aws/config: aws/config
+
+    ~/.gitconfig: git/gitconfig
+    ~/.gitidentities: git/gitidentities
+    ~/.gitalias.txt: git/gitalias/gitalias.txt
+    ~/.gitattributes: git/gitattributes
+
+    ~/.config/Code/User/keybindings.json: vscode/keybindings.json
+
+    ~/bin: bin
+    ~/.zsh: zsh/zsh
+    ~/.zshrc: zsh/zshrc
+    ~/.p10k.zsh: zsh/p10k.zsh
+    ~/.oh-my-zsh/custom: zsh/oh_my_zsh_custom

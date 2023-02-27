@@ -1,0 +1,13 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "git/gitalias"]
+	path = git/gitalias
+	url = https://github.com/GitAlias/gitalias
+[submodule "git/git-fire"]
+	path = git/git-fire
+	url = https://github.com/qw3rtman/git-fire
+[submodule "zsh/oh_my_zsh_custom/plugins/zsh-wakatime"]
+	path = zsh/oh_my_zsh_custom/plugins/zsh-wakatime
+	url = https://github.com/wbingli/zsh-wakatime

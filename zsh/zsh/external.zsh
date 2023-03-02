@@ -19,7 +19,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias ls='exa --header --icons'
-# eval "$(dircolors -b)"
+eval "$(dircolors -b  ~/.config/dircolors/dircolors-solarized/dircolors.ansi-dark)"
 
 # cp
 alias cp="cp -i"

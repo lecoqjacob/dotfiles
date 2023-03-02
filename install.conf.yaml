@@ -47,3 +47,5 @@
 
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.oh-my-zsh/custom: zsh/oh_my_zsh_custom
+
+    ~/.config/dircolors: dircolors

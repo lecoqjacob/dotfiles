@@ -36,6 +36,9 @@ pip3 install thefuck --user
 # Exa
 cargo install exa
 
+# Delta git differ
+cargo install git-delta
+
 ###########
 ### Fonts ###
 ###########

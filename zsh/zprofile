@@ -1,0 +1,52 @@
+
+#!/usr/bin/env zsh
+#
+# Executes commands at login pre-zshrc.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Markus Hubig <mhubig@gmail.com>
+#
+
+#
+# Terminal
+#
+if [[ "$OSTYPE" == darwin* ]]; then
+  export TERM=xterm-256color
+fi
+
+#
+# Language
+#
+if [[ -z "$LANG" ]]; then
+  export LANG='en_US.UTF-8'
+  export LC_CTYPE='en_US.UTF-8'
+  export LC_ALL='en_US.UTF-8'
+fi
+
+#
+# Paths
+#
+typeset -gU cdpath fpath mailpath path
+
+# Set the the list of directories that cd searches.
+cdpath=(
+  $cdpath
+)
+
+#
+# Less
+#
+# Set the default Less options.
+# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
+# Remove -X and -F (exit if the content fits on one screen) to enable it.
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+export LESSEDIT='vim ?lm+%lm. %f'
+
+#
+# Direnv
+#
+
+if which direnv > /dev/null; then
+    eval "$(direnv hook zsh)";
+fi

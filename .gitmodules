@@ -11,3 +11,9 @@
 [submodule "zsh/oh_my_zsh_custom/plugins/zsh-wakatime"]
 	path = zsh/oh_my_zsh_custom/plugins/zsh-wakatime
 	url = https://github.com/wbingli/zsh-wakatime
+[submodule "zsh/oh_my_zsh_custom/plugins/zsh-autosuggestions"]
+	path = zsh/oh_my_zsh_custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/oh_my_zsh_custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/oh_my_zsh_custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

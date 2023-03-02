@@ -6,22 +6,26 @@
 #   Yendor <lecoqjacob@gmail.com>
 #
 
-
-
+alias cls='clear' # Good 'ol Clear Screen command
 alias reload!='reload_zsh'
+
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias alacritty="code ~/.alacritty"
 
-alias cls='clear' # Good 'ol Clear Screen command
 alias pip=pip3
 alias python=python3
+alias zola="flatpak run org.getzola.zola"
 
-# Show current DNS provider
-alias dns="( nmcli dev list || nmcli dev show ) 2>/dev/null | grep DNS"
+# NOT ON WSL OR WINDOWS
+if ! grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+    # Show current DNS provider
+    alias dns="( nmcli dev list || nmcli dev show ) 2>/dev/null | grep DNS"
 
-# Get battery charge status
-alias batt="upower -i $(upower -e | grep BAT) | grep --color=never -E 'state|to\ full|to\ empty|percentage'"
+    # Get battery charge status
+    alias batt="upower -i $(upower -e | grep BAT) | grep --color=never -E 'state|to\ full|to\ empty|percentage'"
+fi
+
 
 # Something SFW
 alias oops="fuck"
@@ -31,6 +35,7 @@ if [[ -e /usr/bin/rg ]]; then
     alias fgrep='rg'
     alias egrep='rg'
 fi
+
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     if [[ -e /usr/bin/gdate ]]; then

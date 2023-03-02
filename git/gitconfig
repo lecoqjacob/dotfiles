@@ -13,6 +13,7 @@
     attributesfile = ~/.gitattributes
 
 [alias]
+    dft = difftool
     nuke = !git-nuke
     cr = "!f() { git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done }; f"
     pnv = push --no-verify
@@ -51,18 +52,25 @@
     navigate = true  # use n and N to move between diff sections
 
 [diff]
+    tool = difftastic
     colorMoved = default
+
+[difftool]
+        prompt = false
+
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
 
 [interactive]
     diffFilter = delta --color-only
 
 [merge]
-    conflictstyle = difftastic
+    conflictstyle = diff3
 
 [user]
     email = lecoqjacob@gmail.com
     name = Jacob LeCoq
-	signingkey = 9093D4CAA98119D7
+	signingkey = 1D6B8C28A50E5119
 
 [hub]
     protocol = ssh
@@ -86,6 +94,9 @@
 
 [init]
 	defaultBranch = main
+
+[pager]
+    difftool = true
 
 # https://github.com/GitAlias/gitalias
 [include]

@@ -10,6 +10,12 @@
     - git submodule sync --recursive
     - git submodule update --init --recursive
 
+    # setup linux
+    # - command: script/setup_linux
+    #   stdout: true
+    #   stderr: true
+    #   description: Setup Linux env
+
     - command: pip3 install --upgrade -r bin/requirements.txt
       stdout: true
       stderr: true
@@ -20,21 +26,24 @@
       stderr: true
       description: Install VS Code extensions
 
-    # Neovim / zsh
-    - sudo apt update && sudo apt install neovim zsh
-
 - link:
     ~/.aws/config: aws/config
 
     ~/.gitconfig: git/gitconfig
-    ~/.gitidentities: git/gitidentities
+    # ~/.gitidentities: git/gitidentities
     ~/.gitalias.txt: git/gitalias/gitalias.txt
     ~/.gitattributes: git/gitattributes
 
     ~/.config/Code/User/keybindings.json: vscode/keybindings.json
 
     ~/bin: bin
+
     ~/.zsh: zsh/zsh
     ~/.zshrc: zsh/zshrc
+    ~/.login: zsh/zlogin
+    ~/.zshenv: zsh/zshenv
+    ~/.zlogout: zsh/zlogout
+    ~/.zshprofile: zsh/zprofile
+
     ~/.p10k.zsh: zsh/p10k.zsh
     ~/.oh-my-zsh/custom: zsh/oh_my_zsh_custom

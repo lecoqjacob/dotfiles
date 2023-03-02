@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Update repository information
+sudo apt update && sudo apt upgrade
+
+sudo apt install aptitude
+
+sudo aptitude -ry install libxmu-dev libssl-dev libgdal-dev libproj-dev git software-properties-common \
+  apt-transport-https wget python3-pip python3-venv python3-dev python3-setuptools \
+  zsh fonts-powerline net-tools curl unzip
+
+# alacritty
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt install alacritty
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+## Oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+#starship
+curl -sS https://starship.rs/install.sh | sh
+
+#fnm
+curl -fsSL https://fnm.vercel.app/install | bash
+
+# Sublime Text
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
+echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list #DEV
+sudo apt-get install sublime-text
+
+# TheFuck
+pip3 install thefuck --user
+
+# Exa
+cargo install exa
+
+###########
+### Fonts ###
+###########
+
+###########
+### Code ###
+###########
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code

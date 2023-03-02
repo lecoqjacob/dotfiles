@@ -39,6 +39,9 @@ cargo install exa
 # Delta git differ
 cargo install git-delta
 
+# Zellij
+cargo install --locked zellij
+
 ###########
 ### Fonts ###
 ###########

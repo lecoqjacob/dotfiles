@@ -49,3 +49,6 @@
     ~/.oh-my-zsh/custom: zsh/oh_my_zsh_custom
 
     ~/.config/dircolors: dircolors
+    ~/.config/starship.toml: config/starship.toml
+    ~/.config/.alacritty.yml: config/.alacritty.yml
+    ~/.config/zellij/config.kdl: config/zellij/config.kdl

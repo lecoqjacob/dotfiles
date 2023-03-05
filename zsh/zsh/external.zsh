@@ -49,6 +49,9 @@ export LESS=-R
 # Wakatime
 export ZSH_WAKATIME_PROJECT_DETECTION=true
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Make Kitty play nicely with SSH (see https://github.com/kovidgoyal/kitty/issues/1613#issuecomment-734753530)
 if test "$TERM" = "xterm-kitty"
 then

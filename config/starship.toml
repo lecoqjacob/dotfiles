@@ -4,10 +4,10 @@ $os\
 $username\
 [](bg:#DA627D fg:#9A348E)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#DA627D bg:#F25D22)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#F25D22 bg:#107BB5)\
 $c\
 $elixir\
 $elm\
@@ -20,7 +20,7 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#107BB5 bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
@@ -66,7 +66,7 @@ truncation_symbol = "…/"
 
 [c]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [docker_context]
@@ -76,65 +76,65 @@ symbol = " "
 
 [elixir]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [elm]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [git_branch]
 format = '[ $symbol $branch ]($style)'
-style  = "bg:#FCA17D"
+style  = "bg:#F25D22"
 symbol = ""
 
 [git_status]
 format = '[$all_status$ahead_behind ]($style)'
-style  = "bg:#FCA17D"
+style  = "bg:#F25D22"
 
 [golang]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [gradle]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 
 [haskell]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [java]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [julia]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [nodejs]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = ""
 
 [nim]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [rust]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = ""
 
 [scala]
 format = '[ $symbol ($version) ]($style)'
-style  = "bg:#86BBD8"
+style  = "bg:#107BB5"
 symbol = " "
 
 [time]

@@ -20,3 +20,6 @@
 [submodule "dircolors/dircolors-solarized"]
 	path = dircolors/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized
+[submodule "projects/git-gui"]
+	path = projects/git-gui
+	url = https://github.com/lecoqjacob/git-gui

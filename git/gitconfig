@@ -8,7 +8,7 @@
 
 [core]
     editor = nvim
-    pager = delta
+	pager = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = /Users/elkxj/.gitignore-global
     attributesfile = ~/.gitattributes
 
@@ -62,7 +62,7 @@
         cmd = difft "$LOCAL" "$REMOTE"
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = diff-so-fancy --patch
 
 [merge]
     conflictstyle = diff3

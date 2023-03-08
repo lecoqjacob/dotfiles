@@ -14,9 +14,10 @@ if [ -f "$HOME/.zsh/env.zsh" ]; then
     source "$HOME/.zsh/env.zsh"
 fi
 
+source "$HOME/.zsh/functions.zsh"
+source "$HOME/.zsh/path.zsh"
 source "$HOME/.zsh/zsh_config.zsh"
 source "$HOME/.zsh/external.zsh"
-source "$HOME/.zsh/functions.zsh"
 source "$HOME/.zsh/aliases.zsh"
-source "$HOME/.zsh/path.zsh"
 source "$HOME/.zsh/completions.zsh"
+

@@ -52,3 +52,5 @@
     ~/.config/starship.toml: config/starship.toml
     ~/.config/.alacritty.yml: config/.alacritty.yml
     ~/.config/zellij/config.kdl: config/zellij/config.kdl
+
+    ~/projects/git-gui: projects/git-gui

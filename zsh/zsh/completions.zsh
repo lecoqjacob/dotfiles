@@ -28,3 +28,6 @@ _vpn_completion() {
 }
 
 complete -F _vpn_completion vpn
+
+# Zellij Completions
+source "$HOME/.zsh/zellij-complettions.zsh"

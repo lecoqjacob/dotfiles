@@ -53,7 +53,8 @@ plugins=(
     themes
     web-search
     yarn
-    zellij zsh-autosuggestions zsh-syntax-highlighting zsh-wakatime
+    zellij
+    zsh-autosuggestions zsh-syntax-highlighting zsh-wakatime
 )
 source $ZSH/oh-my-zsh.sh  # Oh-my-zsh
 
